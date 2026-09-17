@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-17T20:40+09:00",
+ "fetched_at": "2026-09-17T20:54+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "live": true,
@@ -20,7 +20,7 @@
      "name": "KIA"
     },
     "away_score": 0,
-    "home_score": 0,
+    "home_score": 1,
     "state": "live",
     "state_text": "진행 중",
     "inning": 7,
@@ -52,9 +52,9 @@
     "home_score": 1,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 8,
-    "half": "B",
-    "inning_text": "8회말",
+    "inning": 9,
+    "half": "T",
+    "inning_text": "9회초",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "이로운",
