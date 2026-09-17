@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-17T21:07+09:00",
+ "fetched_at": "2026-09-17T21:27+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "live": true,
@@ -23,9 +23,9 @@
     "home_score": 2,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 8,
+    "inning": 9,
     "half": "T",
-    "inning_text": "8회초",
+    "inning_text": "9회초",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "안우진",
@@ -50,11 +50,11 @@
     },
     "away_score": 2,
     "home_score": 1,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "B",
-    "inning_text": "9회말",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "이로운",
@@ -62,7 +62,8 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "KBS N SPORTS,SPOTV"
+    "tv": "KBS N SPORTS,SPOTV",
+    "winner": "away"
    }
   ]
  },
