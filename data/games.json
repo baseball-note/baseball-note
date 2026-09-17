@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-09-17T21:27+09:00",
+ "fetched_at": "2026-09-17T21:44+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
- "live": true,
+ "live": false,
  "today": {
   "date": "2026-09-17",
   "games": [
@@ -21,19 +21,20 @@
     },
     "away_score": 0,
     "home_score": 2,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "안우진",
     "home_starter": "올러",
-    "win_pitcher": null,
-    "lose_pitcher": null,
-    "save_pitcher": null,
-    "tv": "SPOTV2,MBC SPORTS+"
+    "win_pitcher": "곽도규",
+    "lose_pitcher": "박준현",
+    "save_pitcher": "이의리",
+    "tv": "SPOTV2,MBC SPORTS+",
+    "winner": "home"
    },
    {
     "id": "20260917SKNC0",
@@ -59,9 +60,9 @@
     "header_no": 0,
     "away_starter": "이로운",
     "home_starter": "라일리",
-    "win_pitcher": null,
-    "lose_pitcher": null,
-    "save_pitcher": null,
+    "win_pitcher": "이로운",
+    "lose_pitcher": "손주환",
+    "save_pitcher": "전영준",
     "tv": "KBS N SPORTS,SPOTV",
     "winner": "away"
    }
