@@ -1,0 +1,8 @@
+{
+ "fetched_at": null,
+ "source": "https://www.koreabaseball.com",
+ "seed": true,
+ "live": false,
+ "today": {"date": null, "games": []},
+ "yesterday": {"date": null, "games": []}
+}
