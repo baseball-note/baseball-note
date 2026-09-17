@@ -1,8 +1,194 @@
 {
- "fetched_at": null,
+ "fetched_at": "2026-09-17T13:55+09:00",
  "source": "https://www.koreabaseball.com",
- "seed": true,
+ "seed": false,
  "live": false,
- "today": {"date": null, "games": []},
- "yesterday": {"date": null, "games": []}
+ "today": {
+  "date": "2026-09-17",
+  "games": [
+   {
+    "id": "20260917WOHT0",
+    "date": "2026-09-17",
+    "time": "18:30",
+    "stadium": "광주",
+    "away": {
+     "code": "KIWOOM",
+     "name": "키움"
+    },
+    "home": {
+     "code": "KIA",
+     "name": "KIA"
+    },
+    "away_score": null,
+    "home_score": null,
+    "state": "before",
+    "state_text": "경기 전",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "안우진",
+    "home_starter": "올러",
+    "win_pitcher": null,
+    "lose_pitcher": null,
+    "save_pitcher": null,
+    "tv": "SPOTV2,MBC SPORTS+"
+   },
+   {
+    "id": "20260917SKNC0",
+    "date": "2026-09-17",
+    "time": "18:30",
+    "stadium": "창원",
+    "away": {
+     "code": "SSG",
+     "name": "SSG"
+    },
+    "home": {
+     "code": "NC",
+     "name": "NC"
+    },
+    "away_score": null,
+    "home_score": null,
+    "state": "before",
+    "state_text": "경기 전",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "이로운",
+    "home_starter": "라일리",
+    "win_pitcher": null,
+    "lose_pitcher": null,
+    "save_pitcher": null,
+    "tv": "KBS N SPORTS,SPOTV"
+   }
+  ]
+ },
+ "yesterday": {
+  "date": "2026-09-16",
+  "games": [
+   {
+    "id": "20260916KTHH0",
+    "date": "2026-09-16",
+    "time": "18:30",
+    "stadium": "대전",
+    "away": {
+     "code": "KT",
+     "name": "KT"
+    },
+    "home": {
+     "code": "HANWHA",
+     "name": "한화"
+    },
+    "away_score": 4,
+    "home_score": 4,
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "배제성",
+    "home_starter": "류현진",
+    "win_pitcher": null,
+    "lose_pitcher": null,
+    "save_pitcher": null,
+    "tv": "KBS N SPORTS,SBS SPORTS",
+    "winner": "draw"
+   },
+   {
+    "id": "20260916SKLT0",
+    "date": "2026-09-16",
+    "time": "18:30",
+    "stadium": "사직",
+    "away": {
+     "code": "SSG",
+     "name": "SSG"
+    },
+    "home": {
+     "code": "LOTTE",
+     "name": "롯데"
+    },
+    "away_score": 4,
+    "home_score": 1,
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "아빌라",
+    "home_starter": "비슬리",
+    "win_pitcher": "아빌라",
+    "lose_pitcher": "비슬리",
+    "save_pitcher": "문승원",
+    "tv": "SPOTV",
+    "winner": "away"
+   },
+   {
+    "id": "20260916SSOB0",
+    "date": "2026-09-16",
+    "time": "18:30",
+    "stadium": "잠실",
+    "away": {
+     "code": "SAMSUNG",
+     "name": "삼성"
+    },
+    "home": {
+     "code": "DOOSAN",
+     "name": "두산"
+    },
+    "away_score": 1,
+    "home_score": 3,
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "페덱",
+    "home_starter": "벤자민",
+    "win_pitcher": "벤자민",
+    "lose_pitcher": "페덱",
+    "save_pitcher": "이영하",
+    "tv": "MBC SPORTS+",
+    "winner": "home"
+   },
+   {
+    "id": "20260916LGNC0",
+    "date": "2026-09-16",
+    "time": "18:30",
+    "stadium": "창원",
+    "away": {
+     "code": "LG",
+     "name": "LG"
+    },
+    "home": {
+     "code": "NC",
+     "name": "NC"
+    },
+    "away_score": 9,
+    "home_score": 2,
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "박시원",
+    "home_starter": "클레빈저",
+    "win_pitcher": "고우석",
+    "lose_pitcher": "김진호",
+    "save_pitcher": null,
+    "tv": "SPOTV2",
+    "winner": "away"
+   }
+  ]
+ }
 }
