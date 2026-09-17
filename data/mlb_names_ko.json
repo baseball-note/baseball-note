@@ -1,0 +1,21 @@
+{
+  "_설명": "MLB API의 영문 이름(소문자, 공백·하이픈 제거) → 한글 이름. 예: 'Jung Hoo Lee' → 'junghoolee'. 없는 선수는 영문 이름으로 표시돼요.",
+  "junghoolee": "이정후",
+  "haseongkim": "김하성",
+  "hyeseongkim": "김혜성",
+  "sungmunsong": "송성문",
+  "seongmunsong": "송성문",
+  "songsungmun": "송성문",
+  "jihwanbae": "배지환",
+  "woosukgo": "고우석",
+  "wooseokgo": "고우석",
+  "hyunilchoi": "최현일",
+  "junseokshim": "심준석",
+  "hyungchanum": "엄형찬",
+  "hyeongchaneom": "엄형찬",
+  "wonbincho": "조원빈",
+  "hyunseokjang": "장현석",
+  "hyeonseokjang": "장현석",
+  "sungjunkim": "김성준",
+  "seongjunkim": "김성준"
+}

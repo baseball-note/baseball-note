@@ -1,0 +1,12 @@
+{
+ "season": 2026,
+ "fetched_at": null,
+ "source": "https://statsapi.mlb.com/api/v1",
+ "seed": true,
+ "players": [
+  {"id": 808982, "name": "Jung Hoo Lee", "name_ko": "이정후", "position": "OF", "team": "San Francisco Giants", "team_ko": "샌프란시스코 자이언츠", "parent_org": "San Francisco Giants", "parent_org_ko": "샌프란시스코 자이언츠", "level_id": 1, "level": "메이저리그", "splits": [], "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/808982/headshot/67/current"},
+  {"id": 673490, "name": "Ha-Seong Kim", "name_ko": "김하성", "position": "SS", "team": "Atlanta Braves", "team_ko": "애틀랜타 브레이브스", "parent_org": "Atlanta Braves", "parent_org_ko": "애틀랜타 브레이브스", "level_id": 1, "level": "메이저리그", "splits": [], "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/673490/headshot/67/current"},
+  {"id": 808975, "name": "Hyeseong Kim", "name_ko": "김혜성", "position": "2B", "team": "Los Angeles Dodgers", "team_ko": "LA 다저스", "parent_org": "Los Angeles Dodgers", "parent_org_ko": "LA 다저스", "level_id": 1, "level": "메이저리그", "splits": [], "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/808975/headshot/67/current"},
+  {"id": null, "name": "Sung-Mun Song", "name_ko": "송성문", "position": "3B", "team": "San Diego Padres", "team_ko": "샌디에이고 파드리스", "parent_org": "San Diego Padres", "parent_org_ko": "샌디에이고 파드리스", "level_id": 1, "level": "메이저리그", "splits": [], "headshot": null}
+ ]
+}

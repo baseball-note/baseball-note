@@ -1,0 +1,12 @@
+{
+  "site_title": "오늘의 야구 노트",
+  "season": 2026,
+  "favorite_teams": ["KIA", "KIWOOM"],
+  "favorite_players": [
+    {"pcode": "52605", "name": "김도영", "team": "KIA", "type": "hitter", "position": "3루수"},
+    {"pcode": "55636", "name": "박재현", "team": "KIA", "type": "hitter", "position": "외야수"},
+    {"pcode": "78168", "name": "서건창", "team": "KIWOOM", "type": "hitter", "position": "내야수"}
+  ],
+  "mlb_extra_ids": [],
+  "mlb_exclude_ids": []
+}
