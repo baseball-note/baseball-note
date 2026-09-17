@@ -1,9 +1,130 @@
 {
- "fetched_at": "2026-09-17T21:44+09:00",
+ "fetched_at": "2026-09-18T02:07+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "live": false,
  "today": {
+  "date": "2026-09-18",
+  "games": [
+   {
+    "id": "20260918SSHH0",
+    "date": "2026-09-18",
+    "time": "18:30",
+    "stadium": "대전",
+    "away": {
+     "code": "SAMSUNG",
+     "name": "삼성"
+    },
+    "home": {
+     "code": "HANWHA",
+     "name": "한화"
+    },
+    "away_score": null,
+    "home_score": null,
+    "state": "before",
+    "state_text": "경기 전",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "후라도",
+    "home_starter": "박준영",
+    "win_pitcher": null,
+    "lose_pitcher": null,
+    "save_pitcher": null,
+    "tv": "SBS SPORTS"
+   },
+   {
+    "id": "20260918NCLT0",
+    "date": "2026-09-18",
+    "time": "18:30",
+    "stadium": "사직",
+    "away": {
+     "code": "NC",
+     "name": "NC"
+    },
+    "home": {
+     "code": "LOTTE",
+     "name": "롯데"
+    },
+    "away_score": null,
+    "home_score": null,
+    "state": "before",
+    "state_text": "경기 전",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "이재학",
+    "home_starter": "로드리게스",
+    "win_pitcher": null,
+    "lose_pitcher": null,
+    "save_pitcher": null,
+    "tv": "MBC SPORTS+"
+   },
+   {
+    "id": "20260918LGKT0",
+    "date": "2026-09-18",
+    "time": "18:30",
+    "stadium": "수원",
+    "away": {
+     "code": "LG",
+     "name": "LG"
+    },
+    "home": {
+     "code": "KT",
+     "name": "KT"
+    },
+    "away_score": null,
+    "home_score": null,
+    "state": "before",
+    "state_text": "경기 전",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "톨허스트",
+    "home_starter": "로건",
+    "win_pitcher": null,
+    "lose_pitcher": null,
+    "save_pitcher": null,
+    "tv": "SPOTV2"
+   },
+   {
+    "id": "20260918WOOB0",
+    "date": "2026-09-18",
+    "time": "18:30",
+    "stadium": "잠실",
+    "away": {
+     "code": "KIWOOM",
+     "name": "키움"
+    },
+    "home": {
+     "code": "DOOSAN",
+     "name": "두산"
+    },
+    "away_score": null,
+    "home_score": null,
+    "state": "before",
+    "state_text": "경기 전",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "정규경기",
+    "header_no": 0,
+    "away_starter": "알칸타라",
+    "home_starter": "잭로그",
+    "win_pitcher": null,
+    "lose_pitcher": null,
+    "save_pitcher": null,
+    "tv": "SPOTV,KBS N SPORTS"
+   }
+  ]
+ },
+ "yesterday": {
   "date": "2026-09-17",
   "games": [
    {
@@ -64,131 +185,6 @@
     "lose_pitcher": "손주환",
     "save_pitcher": "전영준",
     "tv": "KBS N SPORTS,SPOTV",
-    "winner": "away"
-   }
-  ]
- },
- "yesterday": {
-  "date": "2026-09-16",
-  "games": [
-   {
-    "id": "20260916KTHH0",
-    "date": "2026-09-16",
-    "time": "18:30",
-    "stadium": "대전",
-    "away": {
-     "code": "KT",
-     "name": "KT"
-    },
-    "home": {
-     "code": "HANWHA",
-     "name": "한화"
-    },
-    "away_score": 4,
-    "home_score": 4,
-    "state": "final",
-    "state_text": "경기 종료",
-    "inning": null,
-    "half": null,
-    "inning_text": null,
-    "series": "정규경기",
-    "header_no": 0,
-    "away_starter": "배제성",
-    "home_starter": "류현진",
-    "win_pitcher": null,
-    "lose_pitcher": null,
-    "save_pitcher": null,
-    "tv": "KBS N SPORTS,SBS SPORTS",
-    "winner": "draw"
-   },
-   {
-    "id": "20260916SKLT0",
-    "date": "2026-09-16",
-    "time": "18:30",
-    "stadium": "사직",
-    "away": {
-     "code": "SSG",
-     "name": "SSG"
-    },
-    "home": {
-     "code": "LOTTE",
-     "name": "롯데"
-    },
-    "away_score": 4,
-    "home_score": 1,
-    "state": "final",
-    "state_text": "경기 종료",
-    "inning": null,
-    "half": null,
-    "inning_text": null,
-    "series": "정규경기",
-    "header_no": 0,
-    "away_starter": "아빌라",
-    "home_starter": "비슬리",
-    "win_pitcher": "아빌라",
-    "lose_pitcher": "비슬리",
-    "save_pitcher": "문승원",
-    "tv": "SPOTV",
-    "winner": "away"
-   },
-   {
-    "id": "20260916SSOB0",
-    "date": "2026-09-16",
-    "time": "18:30",
-    "stadium": "잠실",
-    "away": {
-     "code": "SAMSUNG",
-     "name": "삼성"
-    },
-    "home": {
-     "code": "DOOSAN",
-     "name": "두산"
-    },
-    "away_score": 1,
-    "home_score": 3,
-    "state": "final",
-    "state_text": "경기 종료",
-    "inning": null,
-    "half": null,
-    "inning_text": null,
-    "series": "정규경기",
-    "header_no": 0,
-    "away_starter": "페덱",
-    "home_starter": "벤자민",
-    "win_pitcher": "벤자민",
-    "lose_pitcher": "페덱",
-    "save_pitcher": "이영하",
-    "tv": "MBC SPORTS+",
-    "winner": "home"
-   },
-   {
-    "id": "20260916LGNC0",
-    "date": "2026-09-16",
-    "time": "18:30",
-    "stadium": "창원",
-    "away": {
-     "code": "LG",
-     "name": "LG"
-    },
-    "home": {
-     "code": "NC",
-     "name": "NC"
-    },
-    "away_score": 9,
-    "home_score": 2,
-    "state": "final",
-    "state_text": "경기 종료",
-    "inning": null,
-    "half": null,
-    "inning_text": null,
-    "series": "정규경기",
-    "header_no": 0,
-    "away_starter": "박시원",
-    "home_starter": "클레빈저",
-    "win_pitcher": "고우석",
-    "lose_pitcher": "김진호",
-    "save_pitcher": null,
-    "tv": "SPOTV2",
     "winner": "away"
    }
   ]
