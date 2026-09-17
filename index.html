@@ -98,29 +98,28 @@
   .board .meta b { color: #fff; font-weight: 500; }
   .board .streak.win b { color: var(--led); }
 
-  /* 선수 카드 */
-  .cards { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2px 2px 8px; margin: 0 -2px; }
-  .cards::-webkit-scrollbar { height: 6px; }
-  .cards::-webkit-scrollbar-thumb { background: var(--chalk); border-radius: 3px; }
-  @media (min-width: 560px) { .cards { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; } }
+  /* 선수 카드: 사진 원본(약 100×127px)보다 크게 늘리지 않도록 작게 3장 나란히 */
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  @media (min-width: 560px) { .cards { grid-template-columns: repeat(3, minmax(0, 160px)); gap: 12px; } }
   .card {
-    flex: 0 0 78%; scroll-snap-align: start; background: var(--paper); border-radius: 16px;
-    border: 5px solid var(--team, #888); padding: 8px; display: flex; flex-direction: column; gap: 8px;
+    min-width: 0; background: var(--paper); border-radius: 12px;
+    border: 3px solid var(--team, #888); padding: 4px; display: flex; flex-direction: column; gap: 5px;
   }
-  .card .photo { position: relative; aspect-ratio: 4 / 4.6; border-radius: 10px; overflow: hidden; background: linear-gradient(160deg, var(--team, #888), var(--board)); }
+  .card .photo { position: relative; aspect-ratio: 100 / 127; border-radius: 8px; overflow: hidden; background: linear-gradient(160deg, var(--team, #888), var(--board)); }
   .card .photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-  .card .photo .initial { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--display); font-size: 72px; color: rgba(255,255,255,.85); }
-  .card .plate { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 12px 10px; background: linear-gradient(transparent, rgba(0,0,0,.72)); color: #fff; }
-  .card .plate .name { font-family: var(--display); font-size: 26px; line-height: 1; }
-  .card .plate .role { font-size: 13px; opacity: .9; margin-top: 3px; }
-  .card .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 4px; padding: 0 4px; }
-  .card .stat { text-align: center; }
-  .card .stat .v { font-family: var(--display); font-size: 24px; line-height: 1; }
-  .card .stat .l { font-size: 12px; color: var(--ink-soft); }
-  .card .badges { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 4px 2px; min-height: 22px; }
-  .badge { font-size: 12px; background: var(--grass-soft); color: var(--grass); border-radius: 999px; padding: 2px 8px; font-weight: 500; }
+  .card .photo .initial { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--display); font-size: 40px; color: rgba(255,255,255,.85); }
+  .card .plate { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 6px 5px; background: linear-gradient(transparent, rgba(0,0,0,.72)); color: #fff; }
+  .card .plate .name { font-family: var(--display); font-size: 18px; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .plate .role { font-size: 10.5px; opacity: .9; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 2px; padding: 0 1px; }
+  .card .stat { text-align: center; min-width: 0; }
+  .card .stat .v { font-family: var(--display); font-size: 16px; line-height: 1.05; }
+  .card .stat .l { font-size: 10px; color: var(--ink-soft); white-space: nowrap; }
+  .card .badges { display: flex; flex-wrap: wrap; gap: 3px; padding: 0 1px 1px; }
+  .card .badge { font-size: 10px; padding: 1px 5px; }
+  .badge { white-space: nowrap; font-size: 12px; background: var(--grass-soft); color: var(--grass); border-radius: 999px; padding: 2px 8px; font-weight: 500; }
   .badge.top { background: var(--led); color: var(--ink); }
-  .card .empty { font-size: 13px; color: var(--ink-soft); padding: 4px; }
+  .card .empty { font-size: 11px; color: var(--ink-soft); padding: 2px; }
 
   /* 순위표 */
   table { width: 100%; border-collapse: collapse; background: var(--paper); border-radius: var(--radius); overflow: hidden; font-size: 14px; }
@@ -136,7 +135,7 @@
   .cutline { font-size: 12px; color: var(--grass); text-align: right; margin: 6px 4px 0; }
   .table-scroll { overflow-x: auto; border-radius: var(--radius); }
 
-  /* 부문별 순위 TOP 20 */
+  /* 부문별 순위 TOP 5 */
   .tabs { display: flex; gap: 6px; margin-bottom: 10px; }
   .tab { border: 1px solid var(--chalk); background: var(--paper); border-radius: 999px; padding: 6px 16px; cursor: pointer; }
   .tab[aria-selected="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
@@ -164,6 +163,8 @@
 
   /* 경기: 어제 결과 · 오늘 라이브 */
   .games-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .games-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+  a.btn { text-decoration: none; display: inline-block; }
   .games-head .status { font-size: 13px; color: var(--ink-soft); }
   .game-list { display: flex; flex-direction: column; gap: 8px; }
   .game { background: var(--paper); border-radius: var(--radius); padding: 10px 12px 8px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 2px 10px; align-items: center; border-left: 5px solid transparent; }
@@ -228,7 +229,6 @@
   .sheet .stat.q { cursor: pointer; }
   .sheet .stat .v { font-family: var(--display); font-size: 21px; line-height: 1; }
   .sheet .stat .l { font-size: 11px; color: var(--ink-soft); margin-top: 4px; }
-  .sheet .stat.q .l::after { content: " ?"; color: var(--grass); font-weight: 700; }
   .sheet .stat.on { background: var(--note); box-shadow: inset 0 0 0 2px var(--led); }
   .sheet .stat:focus-visible { outline: 3px solid var(--grass); outline-offset: 1px; }
   .sheet .explain { display: none; background: var(--note); border-radius: 12px; padding: 10px 12px; margin-top: 8px; font-size: 14px; }
@@ -299,7 +299,10 @@
   <section aria-labelledby="gamesH">
     <div class="games-head">
       <h2 id="gamesH" style="margin:0">경기 <small id="gamesSub">어제 결과 · 오늘 라이브</small></h2>
-      <button class="btn" id="gamesRefresh">새로고침</button>
+      <div class="games-actions">
+        <a class="btn solid hidden" id="gamesRun" target="_blank" rel="noopener">점수 지금 가져오기</a>
+        <button class="btn" id="gamesRefresh">새로고침</button>
+      </div>
     </div>
     <div class="tabs" role="tablist" id="gameTabs">
       <button class="tab" role="tab" aria-selected="true" data-day="today" id="tabToday">오늘</button>
@@ -331,7 +334,7 @@
   </section>
 
   <section aria-labelledby="topH">
-    <h2 id="topH">부문별 순위 <small id="topSub">TOP 20 · 선수를 누르면 자세히</small></h2>
+    <h2 id="topH">부문별 순위 <small id="topSub">TOP 5 · 선수를 누르면 자세히</small></h2>
     <div class="tabs" role="tablist" id="kindTabs">
       <button class="tab" role="tab" aria-selected="true" data-kind="batting">타자</button>
       <button class="tab" role="tab" aria-selected="false" data-kind="pitching">투수</button>
@@ -399,6 +402,16 @@
                      SF: '희생플라이', WP: '폭투', BK: '보크', WAR: 'WAR', 'K/9': 'K/9' };
   const HIT_ORDER = ['AVG', 'HR', 'RBI', 'R', 'H', 'SB', 'OBP', 'SLG', 'OPS', 'G', 'PA', 'AB', '2B', '3B', 'TB', 'BB', 'SO', 'HBP', 'CS', 'SAC', 'SF', 'GDP', 'IBB', 'MH', 'RISP', 'PH-BA', 'WAR'];
   const PIT_ORDER = ['ERA', 'W', 'L', 'SV', 'HLD', 'IP', 'SO', 'WHIP', 'G', 'GS', 'WPCT', 'H', 'HR', 'BB', 'HBP', 'R', 'ER', 'QS', 'CG', 'SHO', 'BSV', 'AVG', 'TBF', 'NP', 'WP', 'BK', 'WAR'];
+  // 규칙 노트에 없는 기록의 짧은 설명
+  const EXTRA_DESC = {
+    MH: ['멀티히트', '한 경기에서 안타를 2개 이상 친 경기 수예요.'],
+    RISP: ['득점권 타율', '주자가 2루나 3루에 있을 때(점수 내기 좋은 순간)의 타율이에요. 찬스에 얼마나 강한지 보여줘요.'],
+    'PH-BA': ['대타 타율', '대타로 나왔을 때의 타율이에요.'],
+    TBF: ['상대 타자', '투수가 상대한 타자 수예요. 타석 수와 같은 개념이에요.'],
+    NP: ['투구 수', '던진 공의 개수예요. 선발 투수는 보통 한 경기에 100개 안팎을 던져요.'],
+    WP: ['폭투', '포수가 잡을 수 없게 던진 공 때문에 주자가 한 베이스 이상 간 횟수예요.'],
+    BK: ['보크', '투수가 주자를 속이는 반칙 동작을 한 횟수예요. 주자가 한 베이스씩 가요.'],
+  };
   const RATE_STATS = new Set(['AVG', 'OBP', 'SLG', 'OPS', 'WPCT', 'RISP', 'PH-BA', 'PCT']);
   const BOARD_CATS = { batting: ['AVG', 'HR', 'RBI', 'R', 'H', 'OBP', 'SLG', 'OPS', 'SB'], pitching: ['ERA', 'W', 'SV', 'HLD', 'SO', 'WHIP', 'WPCT'] };
   const GLOSSARY = [
@@ -417,8 +430,18 @@
   const PLAYOFF_TEAMS = 5;
   const MLB_API = 'https://statsapi.mlb.com/api/v1';
   const LEVEL_KO = { 1: '메이저리그', 11: '트리플A', 12: '더블A', 13: '하이A', 14: '싱글A', 16: '루키' };
+  const RANK_LIMIT = 5;                     // 부문별 순위는 5위까지만
   const LIVE_REFRESH_MS = 2 * 60 * 1000;   // 진행 중인 경기가 있으면 2분마다 games.json 다시 읽기
 
+  // GitHub Pages 주소(아이디.github.io/저장소)에서 저장소 주소를 알아내요.
+  const REPO = (() => {
+    const m = location.hostname.match(/^([^.]+)\.github\.io$/i);
+    if (!m) return null;
+    const seg = location.pathname.split('/').filter(Boolean)[0];
+    return { owner: m[1], name: seg && !seg.includes('.') ? seg : m[1] + '.github.io' };
+  })();
+  const workflowUrl = (file) => (REPO ? 'https://github.com/' + REPO.owner + '/' + REPO.name + '/actions/workflows/' + file : null);
+  const rawUrl = (path) => (REPO ? 'https://raw.githubusercontent.com/' + REPO.owner + '/' + REPO.name + '/main/' + path : null);
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const team = (code) => TEAMS[code] || { ko: code, short: code, color: '#888' };
@@ -608,7 +631,7 @@
     const day = gd[gameDay] || {};
     const games = day.games || [];
     if (gd.seed) {
-      box.appendChild(el('div', 'game-empty', '경기 기록은 첫 자동 업데이트 뒤에 채워져요. GitHub의 Actions 탭에서 "야구 데이터 매일 업데이트"를 한 번 실행해 주세요.'));
+      box.appendChild(el('div', 'game-empty', '경기 기록은 첫 업데이트 뒤에 채워져요. 위의 "점수 지금 가져오기"를 누르고, 열린 GitHub 화면에서 Run workflow → Run workflow를 눌러 주세요. 1~2분 뒤 "새로고침"을 누르면 보여요.'));
     } else if (day.error) {
       box.appendChild(el('div', 'game-empty', '이날 경기 정보를 불러오지 못했어요. 다음 자동 업데이트 때 다시 시도해요.'));
     } else if (!games.length) {
@@ -627,7 +650,11 @@
     const btn = $('gamesRefresh');
     if (!silent) { btn.disabled = true; btn.textContent = '가져오는 중…'; }
     try {
-      const fresh = await loadJSON('data/games.json', true);
+      // 방금 실행한 결과를 빨리 보려고 저장소 원본 파일을 먼저 읽어요(Pages 반영은 몇 분 걸려요).
+      let fresh = null;
+      const raw = rawUrl('data/games.json');
+      if (raw) { try { fresh = await loadJSON(raw, true); } catch (e) { fresh = null; } }
+      if (!fresh) fresh = await loadJSON('data/games.json', true);
       gamesData = fresh;
       renderGames();
     } catch (e) {
@@ -640,6 +667,15 @@
     gameDay = t.length || !y.length ? 'today' : 'yesterday';
     document.querySelectorAll('#gameTabs .tab').forEach((tab) => tab.addEventListener('click', () => { gameDay = tab.dataset.day; renderGames(); }));
     $('gamesRefresh').addEventListener('click', () => refreshGames(false));
+    const run = $('gamesRun'), url = workflowUrl('live-scores.yml');
+    if (url) {
+      run.href = url;
+      run.classList.remove('hidden');
+      run.addEventListener('click', () => {
+        $('gamesStatus').textContent = 'GitHub에서 Run workflow → Run workflow를 누르세요. 1~2분 뒤 자동으로 새 점수를 읽어요.';
+        [60, 120, 180].forEach((sec) => setTimeout(() => refreshGames(true), sec * 1000));
+      });
+    }
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && gamesData && gamesData.live) refreshGames(true); });
     renderGames();
   }
@@ -719,8 +755,8 @@
       }
       const badges = el('div', 'badges');
       const ranks = Object.entries(f.ranks || {}).filter(([, r]) => r <= 10).sort((a, b) => a[1] - b[1]);
-      ranks.forEach(([cat, r]) => badges.appendChild(el('span', 'badge' + (r === 1 ? ' top' : ''), (STAT_KO[cat] || cat) + ' ' + r + '위')));
-      c.appendChild(badges);
+      ranks.slice(0, 2).forEach(([cat, r]) => badges.appendChild(el('span', 'badge' + (r === 1 ? ' top' : ''), (STAT_KO[cat] || cat) + ' ' + r + '위')));   // 작은 카드엔 2개만, 전체는 상세에서
+      if (ranks.length) c.appendChild(badges);
       const open = () => openPlayer(favoriteInfo(kbo, f));
       c.addEventListener('click', open);
       c.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
@@ -746,7 +782,7 @@
     });
   }
 
-  /* ---------- 부문별 순위 TOP 20 ---------- */
+  /* ---------- 부문별 순위 TOP 5 ---------- */
   let rankKind = 'batting', rankCat = null;
   const catLabel = (cat) => (rankKind === 'pitching' ? (PSTAT_KO[cat] || STAT_KO[cat]) : (STAT_KO[cat] || PSTAT_KO[cat])) || cat;
   function boardRows(kbo, kind, cat) {
@@ -776,7 +812,8 @@
     box.innerHTML = '';
     const note = $('rankNote');
     if (!rankCat) { box.appendChild(el('p', 'none', '아직 부문별 순위를 불러오지 못했어요. 자동 업데이트가 돌면 채워져요.')); note.textContent = ''; return; }
-    const { rows, deep } = boardRows(kbo, rankKind, rankCat);
+    const { rows: allRows, deep } = boardRows(kbo, rankKind, rankCat);
+    const rows = allRows.slice(0, RANK_LIMIT);
     const ol = el('ol');
     rows.forEach((r) => {
       const li = el('li');
@@ -791,15 +828,14 @@
       li.appendChild(n);
       const val = r.value != null ? r.value : r[rankCat];
       li.appendChild(el('span', 'v', fmt(rankCat, val)));
-      const open = () => { const info = r.pcode ? kboPlayerInfo(kbo, r.pcode) : null; if (info) openPlayer(info); else openPlayer(rowInfo(r)); };
+      const open = () => { const info = r.pcode ? kboPlayerInfo(kbo, r.pcode, rankKind === 'pitching' ? 'pitcher' : 'hitter') : null; openPlayer(info || rowInfo(kbo, r)); };
       li.addEventListener('click', open);
       li.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
       ol.appendChild(li);
     });
     box.appendChild(ol);
     const label = catLabel(rankCat);
-    note.textContent = deep ? label + ' ' + rows.length + '위까지 · KBO 홈페이지 리더보드 기준이라 규정 타석·이닝을 채운 선수만 나올 수 있어요'
-      : label + '은(는) 아직 5위까지만 있어요. 다음 자동 업데이트 뒤에 20위까지 채워져요.';
+    note.textContent = label + ' ' + rows.length + '위까지' + (deep ? ' · KBO 리더보드 기준이라 규정 타석·이닝을 채운 선수만 나올 수 있어요' : '');
   }
   function setupRanks(kbo) {
     document.querySelectorAll('#kindTabs .tab').forEach((tab) => tab.addEventListener('click', () => {
@@ -829,16 +865,35 @@
     })));
     return ranks;
   }
-  function kboPlayerInfo(kbo, pcode) {
+  // 리더보드·TOP5 여러 부문에 흩어진 한 선수의 기록을 모두 모아요.
+  const ROW_META = new Set(['rank', 'value', 'pcode', 'name', 'name_ko', 'team', 'photo', 'kind', 'profile']);
+  function collectStats(kbo, pcode, kind) {
+    const out = {};
+    const boards = kind === 'pitcher' ? [kbo.pitching_boards, kbo.pitching_top5] : [kbo.batting_boards, kbo.batting_top5];
+    boards.forEach((b) => Object.entries(b || {}).forEach(([cat, rows]) => (rows || []).forEach((r) => {
+      if (String(r.pcode) !== String(pcode)) return;
+      Object.entries(r).forEach(([k, v]) => { if (!ROW_META.has(k) && v != null && v !== '' && out[k] == null) out[k] = v; });
+      const v = r.value != null ? r.value : r[cat];
+      if (v != null && v !== '' && out[cat] == null) out[cat] = v;
+    })));
+    return out;
+  }
+  function kboPlayerInfo(kbo, pcode, kindHint) {
     const p = (kbo.players || {})[String(pcode)];
     if (!p) return null;
-    const kind = p.kind || ((p.ERA != null || p.IP != null) ? 'pitcher' : 'hitter');
+    const kind = p.kind || kindHint || ((p.ERA != null || p.IP != null) ? 'pitcher' : 'hitter');
     const fav = (kbo.favorites || []).find((f) => String(f.pcode) === String(pcode));
     return { name: p.name_ko || (fav && fav.name) || p.name, name_en: p.name_ko || fav ? p.name : null, team: p.team, kind, photo: p.photo,
-             profile: p.profile || (fav && fav.profile), position: fav && fav.position, stats: p, ranks: ranksFor(kbo, pcode, kind) };
+             profile: p.profile || (fav && fav.profile), position: fav && fav.position, stats: { ...collectStats(kbo, pcode, kind), ...p }, ranks: ranksFor(kbo, pcode, kind) };
   }
-  function rowInfo(r) {   // players 목록에 없는 TOP5 행(코드 없는 경우)
-    return { name: r.name_ko || r.name, name_en: r.name_ko ? r.name : null, team: r.team, kind: rankKind === 'pitching' ? 'pitcher' : 'hitter', stats: { [rankCat]: r.value }, ranks: { [rankCat]: r.rank } };
+  function rowInfo(kbo, r) {   // players 목록에 없는 행: 모든 부문에서 이 선수 기록을 모아 보여줘요
+    const kind = rankKind === 'pitching' ? 'pitcher' : 'hitter';
+    const v = r.value != null ? r.value : r[rankCat];
+    const stats = r.pcode ? collectStats(kbo, r.pcode, kind) : {};
+    if (stats[rankCat] == null && v != null) stats[rankCat] = v;
+    const photo = r.pcode ? 'https://6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/person/middle/' + (kbo.season || kstNow().getFullYear()) + '/' + r.pcode + '.jpg' : null;
+    return { name: r.name_ko || r.name, name_en: r.name_ko ? r.name : null, team: r.team, kind, photo, stats,
+             ranks: r.pcode ? ranksFor(kbo, r.pcode, kind) : { [rankCat]: r.rank } };
   }
   function favoriteInfo(kbo, f) {
     const p = (kbo.players || {})[String(f.pcode)] || {};
@@ -875,21 +930,25 @@
     const explain = el('div', 'explain');
     let onTile = null;
     items.forEach((it) => {
-      const rule = ruleForStat(ruleCode ? ruleCode(it.code) : it.code, kind);
-      const tile = el(rule ? 'button' : 'div', 'stat' + (rule ? ' q' : ''));
-      if (rule) tile.type = 'button';
+      const code = ruleCode ? ruleCode(it.code) : it.code;
+      const rule = ruleForStat(code, kind);
+      const extra = !rule && EXTRA_DESC[code];
+      const tile = el(rule || extra ? 'button' : 'div', 'stat' + (rule || extra ? ' q' : ''));
+      if (rule || extra) tile.type = 'button';
       tile.appendChild(el('div', 'v', it.value));
       tile.appendChild(el('div', 'l', it.label));
-      if (rule) tile.addEventListener('click', () => {
+      if (rule || extra) tile.addEventListener('click', () => {
         if (onTile === tile) { tile.classList.remove('on'); explain.classList.remove('open'); onTile = null; return; }
         if (onTile) onTile.classList.remove('on');
         onTile = tile; tile.classList.add('on');
         explain.innerHTML = '';
-        explain.appendChild(el('h5', null, rule.title));
-        explain.appendChild(el('p', null, rule.summary));
-        const more = el('button', 'btn', '규칙 노트에서 더 알아보기');
-        more.addEventListener('click', () => { closeSheet(); openRuleById(rule.id); });
-        explain.appendChild(more);
+        explain.appendChild(el('h5', null, rule ? rule.title : extra[0]));
+        explain.appendChild(el('p', null, rule ? rule.summary : extra[1]));
+        if (rule) {
+          const more = el('button', 'btn', '규칙 노트에서 더 알아보기');
+          more.addEventListener('click', () => { closeSheet(); openRuleById(rule.id); });
+          explain.appendChild(more);
+        }
         explain.classList.add('open');
         explain.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
@@ -936,7 +995,7 @@
         const items = order.filter((k) => sp.stat && sp.stat[k] != null).map((k) => ({ code: k, label: map[k][1], value: fmt(map[k][0], sp.stat[k]) }));
         body.appendChild(statGrid(items, sp.group === 'pitching' ? 'pitcher' : 'hitter', (k) => map[k][0]));
       });
-      if (info.splits.length) body.appendChild(el('p', 'hint', '기록 이름 옆의 ?를 누르면 설명이 나와요.'));
+      if (info.splits.length) body.appendChild(el('p', 'hint', '기록 칸을 누르면 무슨 뜻인지 설명이 나와요. 한 번 더 누르면 닫혀요.'));
     } else {
       const s = info.stats || {};
       const order = info.kind === 'pitcher' ? PIT_ORDER : HIT_ORDER;
@@ -956,7 +1015,7 @@
         ranks.forEach(([cat, r]) => badges.appendChild(el('span', 'badge' + (r === 1 ? ' top' : ''), (labels[cat] || STAT_KO[cat] || cat) + ' ' + r + '위')));
         body.appendChild(badges);
       }
-      if (items.length) body.appendChild(el('p', 'hint', '기록 이름 옆의 ?를 누르면 설명이 나와요.'));
+      if (items.length) body.appendChild(el('p', 'hint', '기록 칸을 누르면 무슨 뜻인지 설명이 나와요. 한 번 더 누르면 닫혀요.'));
     }
     sheet.hidden = false;
     sheet.classList.add('open');
@@ -1091,3 +1150,4 @@
 </script>
 </body>
 </html>
+
