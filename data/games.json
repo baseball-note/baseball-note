@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-18T22:56+09:00",
+ "fetched_at": "2026-09-18T23:08+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "live": false,
@@ -30,8 +30,8 @@
     "header_no": 0,
     "away_starter": "후라도",
     "home_starter": "박준영",
-    "win_pitcher": null,
-    "lose_pitcher": null,
+    "win_pitcher": "후라도",
+    "lose_pitcher": "박준영",
     "save_pitcher": null,
     "tv": "SBS SPORTS",
     "winner": "away"
@@ -60,8 +60,8 @@
     "header_no": 0,
     "away_starter": "이재학",
     "home_starter": "로드리게스",
-    "win_pitcher": null,
-    "lose_pitcher": null,
+    "win_pitcher": "로드리게스",
+    "lose_pitcher": "이재학",
     "save_pitcher": null,
     "tv": "MBC SPORTS+",
     "winner": "home"
@@ -90,8 +90,8 @@
     "header_no": 0,
     "away_starter": "톨허스트",
     "home_starter": "로건",
-    "win_pitcher": null,
-    "lose_pitcher": null,
+    "win_pitcher": "톨허스트",
+    "lose_pitcher": "로건",
     "save_pitcher": null,
     "tv": "SPOTV2",
     "winner": "away"
