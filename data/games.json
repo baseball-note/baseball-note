@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-18T20:45+09:00",
+ "fetched_at": "2026-09-18T20:53+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "live": true,
@@ -52,9 +52,9 @@
     "home_score": 7,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 7,
-    "half": "B",
-    "inning_text": "7회말",
+    "inning": 8,
+    "half": "T",
+    "inning_text": "8회초",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "이재학",
@@ -107,7 +107,7 @@
      "name": "두산"
     },
     "away_score": 3,
-    "home_score": 5,
+    "home_score": 6,
     "state": "live",
     "state_text": "진행 중",
     "inning": 7,
