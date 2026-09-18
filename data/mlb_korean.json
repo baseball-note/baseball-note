@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-09-18T02:08+09:00",
+ "fetched_at": "2026-09-19T02:08+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -292,7 +292,7 @@
      "team": "San Diego Padres",
      "team_ko": "샌디에이고 파드리스",
      "stat": {
-      "gamesPlayed": 72,
+      "gamesPlayed": 73,
       "plateAppearances": 145,
       "atBats": 123,
       "runs": 19,
