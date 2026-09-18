@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-09-18T22:47+09:00",
+ "fetched_at": "2026-09-18T22:56+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
- "live": true,
+ "live": false,
  "today": {
   "date": "2026-09-18",
   "games": [
@@ -111,11 +111,11 @@
     },
     "away_score": 6,
     "home_score": 6,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 11,
-    "half": "B",
-    "inning_text": "11회말",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "알칸타라",
@@ -123,7 +123,8 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "SPOTV,KBS N SPORTS"
+    "tv": "SPOTV,KBS N SPORTS",
+    "winner": "draw"
    }
   ]
  },
