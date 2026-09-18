@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-18T22:08+09:00",
+ "fetched_at": "2026-09-18T22:21+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "live": true,
@@ -113,9 +113,9 @@
     "home_score": 6,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 10,
+    "inning": 11,
     "half": "T",
-    "inning_text": "10회초",
+    "inning_text": "11회초",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "알칸타라",
