@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-19T19:53+09:00",
+ "fetched_at": "2026-09-19T20:04+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "live": true,
@@ -23,9 +23,9 @@
     "home_score": 5,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 8,
-    "half": "B",
-    "inning_text": "8회말",
+    "inning": 9,
+    "half": "T",
+    "inning_text": "9회초",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "최원태",
@@ -49,7 +49,7 @@
      "name": "KT"
     },
     "away_score": 3,
-    "home_score": 8,
+    "home_score": 13,
     "state": "live",
     "state_text": "진행 중",
     "inning": 7,
