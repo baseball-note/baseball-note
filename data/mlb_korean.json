@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-09-19T02:08+09:00",
+ "fetched_at": "2026-09-20T02:07+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -344,22 +344,22 @@
      "team": "San Francisco Giants",
      "team_ko": "샌프란시스코 자이언츠",
      "stat": {
-      "gamesPlayed": 140,
-      "plateAppearances": 568,
-      "atBats": 529,
-      "runs": 64,
-      "hits": 145,
+      "gamesPlayed": 141,
+      "plateAppearances": 572,
+      "atBats": 533,
+      "runs": 65,
+      "hits": 146,
       "doubles": 30,
       "triples": 4,
-      "homeRuns": 9,
-      "rbi": 55,
+      "homeRuns": 10,
+      "rbi": 56,
       "stolenBases": 12,
       "baseOnBalls": 28,
       "strikeOuts": 57,
       "avg": ".274",
-      "obp": ".317",
-      "slg": ".397",
-      "ops": ".714"
+      "obp": ".316",
+      "slg": ".402",
+      "ops": ".718"
      }
     }
    ],
