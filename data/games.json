@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-09-19T20:29+09:00",
+ "fetched_at": "2026-09-19T20:39+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
- "live": true,
+ "live": false,
  "today": {
   "date": "2026-09-19",
   "games": [
@@ -51,11 +51,11 @@
     },
     "away_score": 3,
     "home_score": 15,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "최승용",
@@ -63,7 +63,8 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "SPOTV,SPOTV2"
+    "tv": "SPOTV,SPOTV2",
+    "winner": "home"
    },
    {
     "id": "20260919HHLG0",
