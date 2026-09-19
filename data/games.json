@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-19T20:04+09:00",
+ "fetched_at": "2026-09-19T20:18+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "live": true,
@@ -21,11 +21,11 @@
     },
     "away_score": 3,
     "home_score": 5,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "최원태",
@@ -33,7 +33,8 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "MBC SPORTS+"
+    "tv": "MBC SPORTS+",
+    "winner": "home"
    },
    {
     "id": "20260919OBKT0",
@@ -49,12 +50,12 @@
      "name": "KT"
     },
     "away_score": 3,
-    "home_score": 13,
+    "home_score": 15,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 7,
+    "inning": 8,
     "half": "B",
-    "inning_text": "7회말",
+    "inning_text": "8회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "최승용",
@@ -109,11 +110,11 @@
     },
     "away_score": 5,
     "home_score": 1,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "B",
-    "inning_text": "9회말",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "네일",
@@ -121,7 +122,8 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "KBS N SPORTS"
+    "tv": "KBS N SPORTS",
+    "winner": "away"
    }
   ]
  },
