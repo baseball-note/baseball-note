@@ -3,7 +3,8 @@
 KBO 공식 영문 홈페이지(eng.koreabaseball.com)의 순위표와 부문별 리더보드(20위까지)를 읽어
 data/kbo.json 으로 저장합니다. 선수 프로필(등번호·생년월일·신장/체중·투타·경력)은
 KBO 한글 홈페이지의 선수 페이지에서 읽어 data/profiles.json 에 모아 두고, 한 번 읽은 선수는
-PROFILE_DAYS 일 동안 다시 읽지 않습니다.
+PROFILE_DAYS 일 동안 다시 읽지 않습니다. 팀 부문별 순위에 쓰는 팀 기록(타격·투수·수비·주루)은
+KBO 한글 홈페이지의 팀 기록 페이지 5장에서 읽어요(못 읽으면 순위표에 딸린 기본 팀 기록만 써요).
 
 - 개인 학습·비상업 용도입니다. 데이터의 권리는 KBO에 있습니다.
 - 하루 1~2회만 실행하세요. 요청 사이에 DELAY 초를 쉽니다.
@@ -37,6 +38,7 @@ SEASON = int(CONFIG.get("season") or dt.date.today().year)
 PHOTO = "https://6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/person/middle/{season}/{pcode}.jpg"
 BOARD_SIZE = 20          # 부문별 순위를 몇 위까지 저장할지
 PROFILE_LIMIT = 80       # 한 번 실행에 새로 읽을 프로필 수(첫 실행 뒤엔 거의 0)
+SUMMARY_LIMIT = 40       # TOP5에만 있는 선수 기록을 한 번에 몇 명까지 읽을지
 PROFILE_DAYS = 180       # 프로필을 다시 읽는 주기(일)
 
 # 정렬 파라미터는 사이트의 MORE+ 링크에서 확인한 값입니다. 페이지는 여러 개를 적으면 차례로 시도해요.
@@ -69,6 +71,17 @@ TOP5_CATEGORIES = {
     "HOLDS": "HLD", "WINNING PERCENTAGE": "WPCT", "STRIKEOUTS": "SO",
 }
 TEAM_CODES = {"KIA", "KIWOOM", "SAMSUNG", "LG", "DOOSAN", "KT", "SSG", "LOTTE", "HANWHA", "NC"}
+# KBO 한글 홈페이지의 팀 이름 → 이 사이트의 팀 코드
+TEAM_BY_KO = {"KIA": "KIA", "기아": "KIA", "키움": "KIWOOM", "삼성": "SAMSUNG", "LG": "LG", "두산": "DOOSAN",
+              "KT": "KT", "SSG": "SSG", "롯데": "LOTTE", "한화": "HANWHA", "NC": "NC"}
+# (묶음, 페이지, 이 표가 맞는지 확인할 열 이름들)
+TEAM_PAGES = [
+    ("hitting", "/Record/Team/Hitter/Basic1.aspx", ("AVG", "AB", "HR")),
+    ("hitting", "/Record/Team/Hitter/Basic2.aspx", ("OBP", "SLG")),
+    ("pitching", "/Record/Team/Pitcher/Basic1.aspx", ("ERA", "IP")),
+    ("fielding", "/Record/Team/Defense/Basic.aspx", ("E", "FPCT")),
+    ("running", "/Record/Team/Runner/Basic.aspx", ("SB", "CS")),
+]
 
 session = requests.Session()
 session.headers.update(HEADERS)
@@ -392,6 +405,80 @@ def check_board(rows, cat, must_verify):
     return out[:BOARD_SIZE]
 
 
+def parse_team_table(html, must_have):
+    """KBO 한글 팀 기록 페이지 → {팀코드: {열이름: 값}}. 표를 못 찾거나 팀이 8개 미만이면 {}."""
+    soup = BeautifulSoup(html, "html.parser")
+    for table in soup.find_all("table"):
+        head = table.find("thead") or table
+        headers = [re.sub(r"\s+", "", th.get_text(" ", strip=True)) for th in head.find_all("th")]
+        if not headers or not all(h in headers for h in must_have):
+            continue
+        team_idx = next((i for i, h in enumerate(headers) if h in ("팀명", "팀", "TEAM")), None)
+        if team_idx is None:
+            continue
+        out = {}
+        for tr in table.find_all("tr"):
+            tds = tr.find_all("td")
+            if len(tds) != len(headers):
+                continue
+            cells = [td.get_text(" ", strip=True) for td in tds]
+            code = TEAM_BY_KO.get(cells[team_idx]) or TEAM_BY_KO.get(cells[team_idx].upper())
+            if not code:          # '합계' 같은 줄
+                continue
+            rec = {}
+            for h, c in zip(headers, cells):
+                if h in ("순위", "팀명", "팀", "TEAM", "RK"):
+                    continue
+                v = to_number(c.replace(",", ""))
+                if v is not None:
+                    rec[h.upper()] = v
+            out[code] = rec
+        if len(out) >= 8:
+            return out
+    return {}
+
+
+def fetch_team_records():
+    """팀 타격·투수·수비·주루 기록. {"hitting": {팀: {...}}, "pitching": ..., "fielding": ..., "running": ...}"""
+    records = {}
+    for group, path, must_have in TEAM_PAGES:
+        log(f"팀 기록 읽는 중… {path}")
+        try:
+            html = fetch_url(KO_BASE + path)
+            rows = parse_team_table(html, must_have) if html else {}
+        except Exception as e:  # noqa: BLE001
+            log(f"  팀 기록 표를 정리하지 못했어요 ({e})")
+            rows = {}
+        if not rows:
+            log("  이 페이지에서는 팀 기록 표를 찾지 못했어요(사이트는 기본 팀 기록만으로도 돌아가요).")
+            continue
+        bucket = records.setdefault(group, {})
+        for code, rec in rows.items():
+            bucket.setdefault(code, {}).update(rec)
+    return records
+
+
+_LOG_TABLE_HEADERS = {"DATE", "OPP", "OPPONENT", "VS", "MONTH", "SPLIT", "RESULT", "YEAR", "SEASON"}
+
+
+def parse_player_summary_extra(html, kind):
+    """선수 페이지의 '올 시즌' 둘째 표(볼넷·삼진·출루율·WHIP 등)처럼 첫 표에 없는 기록을 조심스럽게 더 읽습니다.
+    경기별·연도별 표를 잘못 집지 않도록, 데이터 줄이 정확히 하나인 표만 씁니다."""
+    known = {"BB", "SO", "OBP", "SLG", "OPS", "WHIP", "ER", "R", "HBP", "IBB", "GIDP", "WP", "BK", "QS", "RISP", "MH", "E", "AVG"}
+    merged = {}
+    for headers, rows in parse_tables(html):
+        hs = set(headers)
+        if hs & _LOG_TABLE_HEADERS or len(hs & known) < 3:
+            continue
+        dicts = rows_to_dicts(headers, rows)
+        if len(dicts) != 1:
+            continue
+        for k, v in dicts[0].items():
+            if k not in ("rank", "name", "team", "pcode", "name_ko") and v is not None and k not in merged:
+                merged[k] = v
+    return merged
+
+
 def parse_player_summary(html, kind):
     """리더보드에 없는 선수는 선수 페이지의 올해 기록 표에서 읽습니다(구조가 바뀌면 None)."""
     tables = parse_tables(html)
@@ -460,6 +547,32 @@ def main():
     html = fetch("/Stats/PitchingTop5.aspx")
     pitching_top5 = parse_top5(html) if html else {}
 
+    # TOP5에만 있고 리더보드엔 없는 선수(주로 투수)는 선수 페이지에서 올해 기록 전체를 읽어요.
+    # 그래야 사이트에서 이 선수를 눌렀을 때 타자처럼 모든 기록이 한 번에 보여요.
+    for kind, top5 in (("hitter", batting_top5), ("pitcher", pitching_top5)):
+        base = {}
+        for rows in top5.values():
+            for r in rows:
+                p = r.get("pcode")
+                if p and p not in players and p not in base:
+                    base[p] = r
+        if not base:
+            continue
+        log(f"TOP5에만 있는 {'타자' if kind == 'hitter' else '투수'} {len(base)}명 기록 읽는 중…")
+        page = "/Teams/PlayerInfoHitter/Summary.aspx" if kind == "hitter" else "/Teams/PlayerInfoPitcher/Summary.aspx"
+        for p, r in list(base.items())[:SUMMARY_LIMIT]:
+            rec = {"kind": kind, "pcode": p, "name": r.get("name"), "team": r.get("team"), "name_ko": r.get("name_ko")}
+            try:
+                html = fetch(page, {"pcode": p})
+                stats = parse_player_summary(html, kind) if html else None
+            except Exception as e:  # noqa: BLE001
+                log(f"  {r.get('name')}: 선수 페이지를 읽지 못했어요 ({e})")
+                stats = None
+            for k, v in (stats or {}).items():
+                if k not in ("rank", "name", "team", "pcode", "name_ko") and v is not None:
+                    rec[k] = v
+            players[p] = rec
+
     # 좋아하는 선수 정리
     favorites = []
     for fav in CONFIG.get("favorite_players", []):
@@ -467,12 +580,28 @@ def main():
         kind = fav.get("type", "hitter")
         stats = players.get(pcode)
         source = "board"
+        page = "/Teams/PlayerInfoHitter/Summary.aspx" if kind == "hitter" else "/Teams/PlayerInfoPitcher/Summary.aspx"
+        wanted = ("SO", "WHIP", "BB", "L") if kind == "pitcher" else ("OBP", "SLG", "BB", "SO")
         if not stats:
-            page = "/Teams/PlayerInfoHitter/Summary.aspx" if kind == "hitter" else "/Teams/PlayerInfoPitcher/Summary.aspx"
             log(f"{fav['name']} 선수는 리더보드에 없어 선수 페이지에서 읽습니다…")
             html = fetch(page, {"pcode": pcode})
             stats = parse_player_summary(html, kind) if html else None
             source = "summary" if stats else None
+            if stats and html:
+                for k, v in parse_player_summary_extra(html, kind).items():
+                    stats.setdefault(k, v)
+        elif any(stats.get(k) is None for k in wanted):
+            # 리더보드 한쪽에만 올라 기록이 일부만 있는 선수(예: 승리 순위에만 있는 선발 투수)는 선수 페이지에서 나머지를 채워요.
+            log(f"{fav['name']} 선수의 빠진 기록을 선수 페이지에서 채웁니다…")
+            try:
+                html = fetch(page, {"pcode": pcode})
+                extra = {**(parse_player_summary(html, kind) or {}), **parse_player_summary_extra(html, kind)} if html else {}
+            except Exception as e:  # noqa: BLE001
+                log(f"  선수 페이지를 읽지 못했어요 ({e})")
+                extra = {}
+            for k, v in extra.items():
+                if k not in ("rank", "name", "team", "pcode", "name_ko") and v is not None and stats.get(k) is None:
+                    stats[k] = v
         ranks = {}
         for cat, rows in (batting_boards if kind == "hitter" else pitching_boards).items():
             for r in rows:
@@ -528,6 +657,16 @@ def main():
          if r.get("pcode") and not r.get("name_ko")},
         key=lambda x: x[2] or "")
 
+    # 팀 부문별 순위용 팀 기록. 이번에 못 읽으면 지난번에 읽어 둔 것을 그대로 둬요.
+    team_records = fetch_team_records()
+    team_records_at = dt.date.today().isoformat() if team_records else None
+    if not team_records and OUT.exists():
+        try:
+            prev = json.loads(OUT.read_text("utf-8"))
+            team_records, team_records_at = prev.get("team_records") or {}, prev.get("team_records_at")
+        except Exception:  # noqa: BLE001
+            team_records = {}
+
     data = {
         "season": SEASON,
         "fetched_at": dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).isoformat(timespec="minutes"),
@@ -536,6 +675,8 @@ def main():
         "board_size": BOARD_SIZE,
         "standings": standings,
         "team_stats": team_stats,
+        "team_records": team_records,
+        "team_records_at": team_records_at,
         "batting_top5": batting_top5,
         "pitching_top5": pitching_top5,
         "batting_boards": batting_boards,
@@ -545,7 +686,7 @@ def main():
         "unmapped": [{"pcode": p, "name": n, "team": t} for p, n, t in unmapped],
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), "utf-8")
-    log(f"저장 완료: {OUT}  (팀 {len(standings)}, 선수 {len(players)}, TOP5 {len(batting_top5) + len(pitching_top5)}개 부문)")
+    log(f"저장 완료: {OUT}  (팀 {len(standings)}, 선수 {len(players)}, TOP5 {len(batting_top5) + len(pitching_top5)}개 부문, 팀 기록 {len(team_records)}묶음)")
     if unmapped:
         log("\n한글 이름이 없는 선수 (다음 실행 때 프로필에서 자동으로 채워지지만, data/names_ko.json 에 직접 넣어도 돼요):")
         for p, n, t in unmapped:
@@ -554,3 +695,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

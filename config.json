@@ -5,7 +5,16 @@
   "favorite_players": [
     {"pcode": "52605", "name": "김도영", "team": "KIA", "type": "hitter", "position": "3루수"},
     {"pcode": "55636", "name": "박재현", "team": "KIA", "type": "hitter", "position": "외야수"},
-    {"pcode": "78168", "name": "서건창", "team": "KIWOOM", "type": "hitter", "position": "내야수"}
+    {"pcode": "77637", "name": "양현종", "team": "KIA", "type": "pitcher", "position": "투수"},
+    {"pcode": "78168", "name": "서건창", "team": "KIWOOM", "type": "hitter", "position": "내야수"},
+    {"pcode": "54944", "name": "데이비슨", "team": "KIWOOM", "type": "hitter", "position": "내야수"},
+    {"pcode": "53312", "name": "김건희", "team": "KIWOOM", "type": "hitter", "position": "포수"}
+  ],
+  "mlb_featured": [
+    {"id": 808982, "name": "이정후"},
+    {"id": 673490, "name": "김하성"},
+    {"id": 808975, "name": "김혜성"},
+    {"id": 823550, "name": "송성문"}
   ],
   "mlb_extra_ids": [],
   "mlb_exclude_ids": []

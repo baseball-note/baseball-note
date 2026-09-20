@@ -7,6 +7,8 @@ MLB 공식 Stats API(statsapi.mlb.com, 무료·인증 없음)에서
 - 선수 명단을 손으로 관리할 필요가 없어요. birthCountry 가 South Korea 인 선수를 모읍니다.
 - 한국 태생이 아닌 한국계 선수를 넣고 싶으면 config.json 의 mlb_extra_ids 에 MLBAM id 를,
   빼고 싶은 선수는 mlb_exclude_ids 에 적으세요.
+- config.json 의 mlb_featured 에 적은 선수는 그 순서대로 목록 맨 앞에 나오고,
+  사이트가 그 선수 팀의 오늘 경기를 MLB에서 바로 읽어 보여줘요(그래서 team_id 도 함께 저장해요).
 
 실행:  python scripts/fetch_mlb.py
 """
@@ -30,6 +32,8 @@ HEADERS = {"User-Agent": "kbo-note personal fan site"}
 SEASON = int(CONFIG.get("season") or dt.date.today().year)
 EXTRA_IDS = {int(x) for x in CONFIG.get("mlb_extra_ids", [])}
 EXCLUDE_IDS = {int(x) for x in CONFIG.get("mlb_exclude_ids", [])}
+# 맨 앞에 보여줄 선수: [{"id": 808982, "name": "이정후"}, ...] 또는 id/이름만 적어도 돼요.
+FEATURED = [f if isinstance(f, dict) else ({"id": f} if isinstance(f, int) else {"name": str(f)}) for f in CONFIG.get("mlb_featured", [])]
 
 LEVELS = [1, 11, 12, 13, 14, 16]  # MLB, AAA, AA, High-A, A, Rookie
 LEVEL_KO = {1: "메이저리그", 11: "트리플A", 12: "더블A", 13: "하이A", 14: "싱글A", 16: "루키"}
@@ -84,6 +88,17 @@ def korean_name(p):
         if ko:
             return ko
     return None
+
+
+def featured_index(player):
+    """mlb_featured 에서 몇 번째인지(없으면 큰 수). id 가 먼저, 없으면 한글/영문 이름으로 맞춰요."""
+    for i, f in enumerate(FEATURED):
+        if f.get("id") and player.get("id") and int(f["id"]) == int(player["id"]):
+            return i
+    for i, f in enumerate(FEATURED):
+        if f.get("name") and f["name"] in (player.get("name_ko"), player.get("name")):
+            return i
+    return len(FEATURED) + 1
 
 
 def is_korean_born(p):
@@ -196,7 +211,9 @@ def main():
             "birth_city": p.get("birthCity"),
             "profile": {k: v for k, v in profile.items() if v not in (None, "")},
             "team": team.get("name"),
+            "team_id": team.get("id") or cur.get("id"),
             "team_ko": MLB_TEAMS_KO.get(team.get("name")),
+            "parent_org_id": team.get("parentOrgId") or (team.get("id") if level_id == 1 else None),
             "parent_org": parent,
             "parent_org_ko": MLB_TEAMS_KO.get(parent),
             "level_id": level_id,
@@ -206,7 +223,8 @@ def main():
         })
         time.sleep(0.3)
 
-    players.sort(key=lambda x: (LEVEL_ORDER.get(x["level_id"], 9), x["name_ko"] or x["name"] or ""))
+    # 레벨(메이저 → 루키) 순서, 같은 레벨 안에서는 mlb_featured 에 적은 순서가 먼저, 그다음 이름순
+    players.sort(key=lambda x: (LEVEL_ORDER.get(x["level_id"], 9), featured_index(x), x["name_ko"] or x["name"] or ""))
     if not players:
         log("한국 선수를 한 명도 찾지 못했습니다. 기존 데이터를 유지합니다.")
         sys.exit(1)
