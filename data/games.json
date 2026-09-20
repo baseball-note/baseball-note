@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-20T17:46+09:00",
+ "fetched_at": "2026-09-20T17:54+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -153,8 +153,8 @@
     "state": "live",
     "state_text": "진행 중",
     "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "half": "B",
+    "inning_text": "9회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "시라카와",
