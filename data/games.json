@@ -1,7 +1,8 @@
 {
- "fetched_at": "2026-09-20T15:25+09:00",
+ "fetched_at": "2026-09-20T15:40+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
+ "script": "box-1",
  "live": true,
  "today": {
   "date": "2026-09-20",
@@ -20,12 +21,12 @@
      "name": "SSG"
     },
     "away_score": 4,
-    "home_score": 3,
+    "home_score": 6,
     "state": "live",
     "state_text": "진행 중",
     "inning": 5,
-    "half": "T",
-    "inning_text": "5회초",
+    "half": "B",
+    "inning_text": "5회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "하영민",
@@ -33,7 +34,9 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "MBC SPORTS+"
+    "tv": "MBC SPORTS+",
+    "sr_id": "0",
+    "season_id": "2026"
    },
    {
     "id": "20260920SSLT0",
@@ -49,7 +52,7 @@
      "name": "롯데"
     },
     "away_score": 4,
-    "home_score": 3,
+    "home_score": 8,
     "state": "live",
     "state_text": "진행 중",
     "inning": 4,
@@ -62,7 +65,9 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "KBS N SPORTS"
+    "tv": "KBS N SPORTS",
+    "sr_id": "0",
+    "season_id": "2026"
    },
    {
     "id": "20260920OBKT0",
@@ -78,12 +83,12 @@
      "name": "KT"
     },
     "away_score": 0,
-    "home_score": 7,
+    "home_score": 8,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 4,
-    "half": "B",
-    "inning_text": "4회말",
+    "inning": 6,
+    "half": "T",
+    "inning_text": "6회초",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "박신지",
@@ -91,7 +96,9 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "SPOTV2"
+    "tv": "SPOTV2",
+    "sr_id": "0",
+    "season_id": "2026"
    },
    {
     "id": "20260920HHLG0",
@@ -106,13 +113,13 @@
      "code": "LG",
      "name": "LG"
     },
-    "away_score": 0,
-    "home_score": 2,
+    "away_score": 3,
+    "home_score": 4,
     "state": "live",
     "state_text": "진행 중",
     "inning": 5,
-    "half": "T",
-    "inning_text": "5회초",
+    "half": "B",
+    "inning_text": "5회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "황준서",
@@ -120,7 +127,9 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "SPOTV"
+    "tv": "SPOTV",
+    "sr_id": "0",
+    "season_id": "2026"
    },
    {
     "id": "20260920HTNC0",
@@ -135,7 +144,7 @@
      "code": "NC",
      "name": "NC"
     },
-    "away_score": 0,
+    "away_score": 2,
     "home_score": 0,
     "state": "live",
     "state_text": "진행 중",
@@ -149,7 +158,9 @@
     "win_pitcher": null,
     "lose_pitcher": null,
     "save_pitcher": null,
-    "tv": "SBS SPORTS"
+    "tv": "SBS SPORTS",
+    "sr_id": "0",
+    "season_id": "2026"
    }
   ]
  },
@@ -184,6 +195,8 @@
     "lose_pitcher": "사토시",
     "save_pitcher": "이이무라",
     "tv": "MBC SPORTS+",
+    "sr_id": "0",
+    "season_id": "2026",
     "winner": "home"
    },
    {
@@ -214,6 +227,8 @@
     "lose_pitcher": "윤태호",
     "save_pitcher": null,
     "tv": "SPOTV,SPOTV2",
+    "sr_id": "0",
+    "season_id": "2026",
     "winner": "home"
    },
    {
@@ -244,6 +259,8 @@
     "lose_pitcher": "조동욱",
     "save_pitcher": "손주영",
     "tv": "SBS SPORTS",
+    "sr_id": "0",
+    "season_id": "2026",
     "winner": "home"
    },
    {
@@ -274,6 +291,8 @@
     "lose_pitcher": "구창모",
     "save_pitcher": null,
     "tv": "KBS N SPORTS",
+    "sr_id": "0",
+    "season_id": "2026",
     "winner": "away"
    }
   ]
