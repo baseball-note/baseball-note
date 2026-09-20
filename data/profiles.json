@@ -1386,5 +1386,29 @@
   "career": "무학초-창원신월중-용마고",
   "draft": "17 롯데 2차 1라운드 3순위",
   "fetched": "2026-09-19"
+ },
+ "53312": {
+  "name_ko": "김건희",
+  "number": 12,
+  "birth": "2004-11-07",
+  "bats_throws": "우투우타",
+  "position": "포수",
+  "height": 186,
+  "weight": 96,
+  "career": "대전신흥초-온양중-원주고",
+  "draft": "23 키움 1라운드 6순위",
+  "fetched": "2026-09-20"
+ },
+ "55903": {
+  "name_ko": "라일리",
+  "number": 3,
+  "birth": "1996-07-09",
+  "bats_throws": "우투우타",
+  "position": "투수",
+  "height": 190,
+  "weight": 100,
+  "career": "미국 Louisville(대)",
+  "draft": "25 NC 자유선발",
+  "fetched": "2026-09-20"
  }
 }
