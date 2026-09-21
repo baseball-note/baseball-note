@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-09-21T02:07+09:00",
+ "fetched_at": "2026-09-22T02:07+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -37,22 +37,22 @@
      "team": "San Francisco Giants",
      "team_ko": "샌프란시스코 자이언츠",
      "stat": {
-      "gamesPlayed": 142,
-      "plateAppearances": 576,
-      "atBats": 537,
+      "gamesPlayed": 143,
+      "plateAppearances": 579,
+      "atBats": 539,
       "runs": 65,
-      "hits": 148,
+      "hits": 149,
       "doubles": 31,
       "triples": 4,
       "homeRuns": 10,
       "rbi": 57,
       "stolenBases": 12,
-      "baseOnBalls": 28,
+      "baseOnBalls": 29,
       "strikeOuts": 57,
       "avg": ".276",
-      "obp": ".318",
+      "obp": ".320",
       "slg": ".404",
-      "ops": ".722"
+      "ops": ".724"
      }
     }
    ],
@@ -91,9 +91,9 @@
      "team": "Atlanta Braves",
      "team_ko": "애틀랜타 브레이브스",
      "stat": {
-      "gamesPlayed": 46,
-      "plateAppearances": 128,
-      "atBats": 114,
+      "gamesPlayed": 47,
+      "plateAppearances": 132,
+      "atBats": 118,
       "runs": 8,
       "hits": 14,
       "doubles": 1,
@@ -102,11 +102,11 @@
       "rbi": 9,
       "stolenBases": 2,
       "baseOnBalls": 13,
-      "strikeOuts": 33,
-      "avg": ".123",
-      "obp": ".219",
-      "slg": ".132",
-      "ops": ".351"
+      "strikeOuts": 35,
+      "avg": ".119",
+      "obp": ".212",
+      "slg": ".127",
+      "ops": ".339"
      }
     }
    ],
@@ -199,9 +199,9 @@
      "team": "San Diego Padres",
      "team_ko": "샌디에이고 파드리스",
      "stat": {
-      "gamesPlayed": 74,
-      "plateAppearances": 146,
-      "atBats": 124,
+      "gamesPlayed": 75,
+      "plateAppearances": 147,
+      "atBats": 125,
       "runs": 19,
       "hits": 23,
       "doubles": 4,
@@ -211,10 +211,10 @@
       "stolenBases": 13,
       "baseOnBalls": 18,
       "strikeOuts": 29,
-      "avg": ".185",
-      "obp": ".287",
-      "slg": ".242",
-      "ops": ".529"
+      "avg": ".184",
+      "obp": ".285",
+      "slg": ".240",
+      "ops": ".525"
      }
     }
    ],
