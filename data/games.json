@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-23T21:34+09:00",
+ "fetched_at": "2026-09-23T21:50+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -22,11 +22,11 @@
     },
     "away_score": 9,
     "home_score": 5,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "박세웅",
@@ -36,7 +36,8 @@
     "save_pitcher": null,
     "tv": "KBS N SPORTS,MBC SPORTS+",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "away"
    },
    {
     "id": "20260923NCKT0",
@@ -55,9 +56,9 @@
     "home_score": 3,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 8,
+    "inning": 9,
     "half": "B",
-    "inning_text": "8회말",
+    "inning_text": "9회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "라일리",
@@ -83,12 +84,12 @@
      "name": "두산"
     },
     "away_score": 2,
-    "home_score": 2,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "B",
-    "inning_text": "9회말",
+    "home_score": 3,
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "올러",
@@ -98,7 +99,8 @@
     "save_pitcher": null,
     "tv": "SPOTV2",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "home"
    }
   ]
  },
