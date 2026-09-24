@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-24T20:05+09:00",
+ "fetched_at": "2026-09-24T20:20+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -21,12 +21,12 @@
      "name": "SSG"
     },
     "away_score": 5,
-    "home_score": 3,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "B",
-    "inning_text": "9회말",
+    "home_score": 4,
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "후라도",
@@ -36,7 +36,8 @@
     "save_pitcher": null,
     "tv": "KBS N SPORTS,SBS SPORTS",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "away"
    },
    {
     "id": "20260924NCKT0",
@@ -87,9 +88,9 @@
     "home_score": 4,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 8,
+    "inning": 9,
     "half": "B",
-    "inning_text": "8회말",
+    "inning_text": "9회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "로드리게스",
