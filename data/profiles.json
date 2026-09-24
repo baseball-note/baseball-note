@@ -1410,5 +1410,17 @@
   "career": "미국 Louisville(대)",
   "draft": "25 NC 자유선발",
   "fetched": "2026-09-20"
+ },
+ "53375": {
+  "name_ko": "후라도",
+  "number": 75,
+  "birth": "1996-01-30",
+  "bats_throws": "우투우타",
+  "position": "투수",
+  "height": 188,
+  "weight": 109,
+  "career": "파나마 San Judas Tadeo(고)-키움",
+  "draft": "23 키움 자유선발",
+  "fetched": "2026-09-24"
  }
 }
