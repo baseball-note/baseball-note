@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-25T19:09+09:00",
+ "fetched_at": "2026-09-25T19:24+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -86,9 +86,9 @@
     "home_score": 8,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 6,
+    "inning": 7,
     "half": "T",
-    "inning_text": "6회초",
+    "inning_text": "7회초",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "화이트",
