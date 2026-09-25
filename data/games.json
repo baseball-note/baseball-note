@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-25T15:13+09:00",
+ "fetched_at": "2026-09-25T15:35+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -20,10 +20,10 @@
      "code": "SSG",
      "name": "SSG"
     },
-    "away_score": null,
-    "home_score": null,
-    "state": "before",
-    "state_text": "경기 전",
+    "away_score": 0,
+    "home_score": 0,
+    "state": "cancelled",
+    "state_text": "우천취소",
     "inning": null,
     "half": null,
     "inning_text": null,
