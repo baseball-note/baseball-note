@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-09-25T15:35+09:00",
+ "fetched_at": "2026-09-25T17:13+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
- "live": false,
+ "live": true,
  "today": {
   "date": "2026-09-25",
   "games": [
@@ -82,13 +82,13 @@
      "code": "NC",
      "name": "NC"
     },
-    "away_score": null,
-    "home_score": null,
-    "state": "before",
-    "state_text": "경기 전",
-    "inning": null,
-    "half": null,
-    "inning_text": null,
+    "away_score": 0,
+    "home_score": 0,
+    "state": "live",
+    "state_text": "진행 중",
+    "inning": 1,
+    "half": "B",
+    "inning_text": "1회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "화이트",
