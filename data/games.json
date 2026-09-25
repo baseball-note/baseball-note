@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-25T17:13+09:00",
+ "fetched_at": "2026-09-25T17:31+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -83,7 +83,7 @@
      "name": "NC"
     },
     "away_score": 0,
-    "home_score": 0,
+    "home_score": 6,
     "state": "live",
     "state_text": "진행 중",
     "inning": 1,
