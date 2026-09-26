@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-09-26T02:07+09:00",
+ "fetched_at": "2026-09-27T02:07+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -199,22 +199,22 @@
      "team": "San Diego Padres",
      "team_ko": "샌디에이고 파드리스",
      "stat": {
-      "gamesPlayed": 76,
-      "plateAppearances": 148,
-      "atBats": 126,
-      "runs": 20,
-      "hits": 23,
+      "gamesPlayed": 77,
+      "plateAppearances": 150,
+      "atBats": 128,
+      "runs": 21,
+      "hits": 25,
       "doubles": 4,
       "triples": 0,
       "homeRuns": 1,
-      "rbi": 16,
+      "rbi": 17,
       "stolenBases": 13,
       "baseOnBalls": 18,
       "strikeOuts": 30,
-      "avg": ".183",
-      "obp": ".283",
-      "slg": ".238",
-      "ops": ".521"
+      "avg": ".195",
+      "obp": ".293",
+      "slg": ".250",
+      "ops": ".543"
      }
     }
    ],
