@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-09-27T02:07+09:00",
+ "fetched_at": "2026-09-28T02:07+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -91,22 +91,22 @@
      "team": "Atlanta Braves",
      "team_ko": "애틀랜타 브레이브스",
      "stat": {
-      "gamesPlayed": 49,
-      "plateAppearances": 139,
-      "atBats": 124,
-      "runs": 8,
-      "hits": 14,
+      "gamesPlayed": 50,
+      "plateAppearances": 143,
+      "atBats": 127,
+      "runs": 10,
+      "hits": 15,
       "doubles": 1,
-      "triples": 0,
+      "triples": 1,
       "homeRuns": 0,
       "rbi": 9,
       "stolenBases": 2,
-      "baseOnBalls": 13,
-      "strikeOuts": 36,
-      "avg": ".113",
-      "obp": ".203",
-      "slg": ".121",
-      "ops": ".324"
+      "baseOnBalls": 14,
+      "strikeOuts": 37,
+      "avg": ".118",
+      "obp": ".211",
+      "slg": ".142",
+      "ops": ".353"
      }
     }
    ],
