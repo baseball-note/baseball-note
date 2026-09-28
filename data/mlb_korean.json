@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-09-28T02:07+09:00",
+ "fetched_at": "2026-09-29T02:09+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -91,22 +91,22 @@
      "team": "Atlanta Braves",
      "team_ko": "애틀랜타 브레이브스",
      "stat": {
-      "gamesPlayed": 50,
-      "plateAppearances": 143,
-      "atBats": 127,
-      "runs": 10,
+      "gamesPlayed": 51,
+      "plateAppearances": 147,
+      "atBats": 129,
+      "runs": 11,
       "hits": 15,
       "doubles": 1,
       "triples": 1,
       "homeRuns": 0,
       "rbi": 9,
       "stolenBases": 2,
-      "baseOnBalls": 14,
-      "strikeOuts": 37,
-      "avg": ".118",
-      "obp": ".211",
-      "slg": ".142",
-      "ops": ".353"
+      "baseOnBalls": 16,
+      "strikeOuts": 38,
+      "avg": ".116",
+      "obp": ".219",
+      "slg": ".140",
+      "ops": ".359"
      }
     }
    ],
@@ -199,22 +199,22 @@
      "team": "San Diego Padres",
      "team_ko": "샌디에이고 파드리스",
      "stat": {
-      "gamesPlayed": 77,
-      "plateAppearances": 150,
-      "atBats": 128,
-      "runs": 21,
+      "gamesPlayed": 78,
+      "plateAppearances": 154,
+      "atBats": 131,
+      "runs": 22,
       "hits": 25,
       "doubles": 4,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 17,
       "stolenBases": 13,
-      "baseOnBalls": 18,
-      "strikeOuts": 30,
-      "avg": ".195",
-      "obp": ".293",
-      "slg": ".250",
-      "ops": ".543"
+      "baseOnBalls": 19,
+      "strikeOuts": 31,
+      "avg": ".191",
+      "obp": ".291",
+      "slg": ".244",
+      "ops": ".535"
      }
     }
    ],
