@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-09-29T02:09+09:00",
+ "fetched_at": "2026-09-30T02:09+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -929,6 +929,32 @@
     }
    ],
    "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/806739/headshot/67/current"
+  },
+  {
+   "id": 842831,
+   "name": "Jun-Sang Eom",
+   "name_ko": null,
+   "position": "SS",
+   "age": 18,
+   "birth_city": "Seoul",
+   "profile": {
+    "birth": "2008-04-23",
+    "height": 185,
+    "weight": 93,
+    "bats": "R",
+    "throws": "R",
+    "position_name": "Shortstop"
+   },
+   "team": "DSL Arizona Red",
+   "team_id": 5087,
+   "team_ko": null,
+   "parent_org_id": 109,
+   "parent_org": "Arizona Diamondbacks",
+   "parent_org_ko": "애리조나 다이아몬드백스",
+   "level_id": 16,
+   "level": "루키",
+   "splits": [],
+   "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/842831/headshot/67/current"
   },
   {
    "id": 836688,

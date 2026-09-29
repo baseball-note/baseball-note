@@ -1422,5 +1422,29 @@
   "career": "파나마 San Judas Tadeo(고)-키움",
   "draft": "23 키움 자유선발",
   "fetched": "2026-09-24"
+ },
+ "56801": {
+  "name_ko": "아빌라",
+  "number": 33,
+  "birth": "1997-01-14",
+  "bats_throws": "우투우타",
+  "position": "투수",
+  "height": 180,
+  "weight": 95,
+  "career": "베네수엘라 Electron Caracas(고)",
+  "draft": "26 SSG 자유선발",
+  "fetched": "2026-09-29"
+ },
+ "68205": {
+  "name_ko": "전민재",
+  "number": 13,
+  "birth": "1999-06-30",
+  "bats_throws": "우투우타",
+  "position": "내야수",
+  "height": 181,
+  "weight": 73,
+  "career": "천안남산초-천안북중-대전고-두산",
+  "draft": "18 두산 2차 4라운드 40순위",
+  "fetched": "2026-09-29"
  }
 }
