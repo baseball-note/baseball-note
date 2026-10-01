@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-10-01T21:56+09:00",
+ "fetched_at": "2026-10-01T22:10+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
- "live": true,
+ "live": false,
  "today": {
   "date": "2026-10-01",
   "games": [
@@ -22,11 +22,11 @@
     },
     "away_score": 7,
     "home_score": 5,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "B",
-    "inning_text": "9회말",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "소형준",
@@ -36,7 +36,8 @@
     "save_pitcher": null,
     "tv": "KBS N SPORTS",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "away"
    },
    {
     "id": "20261001HHSS0",
