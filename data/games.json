@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-01T21:33+09:00",
+ "fetched_at": "2026-10-01T21:56+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -24,9 +24,9 @@
     "home_score": 5,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 8,
-    "half": "T",
-    "inning_text": "8회초",
+    "inning": 9,
+    "half": "B",
+    "inning_text": "9회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "소형준",
@@ -53,11 +53,11 @@
     },
     "away_score": 2,
     "home_score": 3,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "황준서",
@@ -67,7 +67,8 @@
     "save_pitcher": null,
     "tv": "MBC SPORTS+",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "home"
    },
    {
     "id": "20261001LGSK0",
@@ -84,11 +85,11 @@
     },
     "away_score": 5,
     "home_score": 6,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "임찬규",
@@ -98,7 +99,8 @@
     "save_pitcher": null,
     "tv": "SPOTV2",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "home"
    },
    {
     "id": "20261001NCOB0",
@@ -114,12 +116,12 @@
      "name": "두산"
     },
     "away_score": 7,
-    "home_score": 8,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 8,
-    "half": "B",
-    "inning_text": "8회말",
+    "home_score": 9,
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "송명기",
@@ -129,7 +131,8 @@
     "save_pitcher": null,
     "tv": "SBS SPORTS,SPOTV",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "home"
    }
   ]
  },
