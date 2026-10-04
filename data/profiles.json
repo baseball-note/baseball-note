@@ -1446,5 +1446,17 @@
   "career": "천안남산초-천안북중-대전고-두산",
   "draft": "18 두산 2차 4라운드 40순위",
   "fetched": "2026-09-29"
+ },
+ "52043": {
+  "name_ko": "벤자민",
+  "number": 48,
+  "birth": "1993-07-26",
+  "bats_throws": "좌투좌타",
+  "position": "투수",
+  "height": 188,
+  "weight": 95,
+  "career": "미국 Kansas(대)-KT",
+  "draft": "22 KT 자유선발",
+  "fetched": "2026-10-04"
  }
 }
