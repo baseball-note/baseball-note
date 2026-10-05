@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-10-05T17:08+09:00",
+ "fetched_at": "2026-10-05T17:30+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
- "live": true,
+ "live": false,
  "today": {
   "date": "2026-10-05",
   "games": [
@@ -54,11 +54,11 @@
     },
     "away_score": 6,
     "home_score": 13,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "전준표",
@@ -68,7 +68,8 @@
     "save_pitcher": null,
     "tv": "MBC SPORTS+",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "home"
    },
    {
     "id": "20261005LTKT0",
@@ -115,13 +116,13 @@
      "code": "LG",
      "name": "LG"
     },
-    "away_score": 3,
+    "away_score": 6,
     "home_score": 4,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 8,
-    "half": "B",
-    "inning_text": "8회말",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "올러",
@@ -131,7 +132,8 @@
     "save_pitcher": null,
     "tv": "SPOTV2",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "away"
    },
    {
     "id": "20261005SKNC0",
