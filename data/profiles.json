@@ -1458,5 +1458,17 @@
   "career": "미국 Kansas(대)-KT",
   "draft": "22 KT 자유선발",
   "fetched": "2026-10-04"
+ },
+ "53609": {
+  "name_ko": "곽도규",
+  "number": 0,
+  "birth": "2004-04-12",
+  "bats_throws": "좌투좌타",
+  "position": "투수",
+  "height": 185,
+  "weight": 90,
+  "career": "도척초-공주중-공주고",
+  "draft": "23 KIA 5라운드 42순위",
+  "fetched": "2026-10-07"
  }
 }
