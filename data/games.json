@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-10-07T21:58+09:00",
+ "fetched_at": "2026-10-07T22:17+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
- "live": true,
+ "live": false,
  "today": {
   "date": "2026-10-07",
   "games": [
@@ -86,11 +86,11 @@
     },
     "away_score": 12,
     "home_score": 4,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "양현종",
@@ -100,7 +100,8 @@
     "save_pitcher": null,
     "tv": "SPOTV",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "away"
    },
    {
     "id": "20261007SSKT0",
@@ -117,11 +118,11 @@
     },
     "away_score": 3,
     "home_score": 9,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "원태인",
@@ -131,7 +132,8 @@
     "save_pitcher": null,
     "tv": "MBC SPORTS+",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "home"
    },
    {
     "id": "20261007OBLG0",
