@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-10T20:11+09:00",
+ "fetched_at": "2026-10-10T20:30+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -54,11 +54,11 @@
     },
     "away_score": 5,
     "home_score": 8,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "T",
-    "inning_text": "9회초",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "최민준",
@@ -68,7 +68,8 @@
     "save_pitcher": null,
     "tv": "SPOTV",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "home"
    },
    {
     "id": "20261010NCHH0",
@@ -84,7 +85,7 @@
      "name": "한화"
     },
     "away_score": 9,
-    "home_score": 4,
+    "home_score": 8,
     "state": "live",
     "state_text": "진행 중",
     "inning": 9,
