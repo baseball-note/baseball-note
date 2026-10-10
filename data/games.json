@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-10-10T20:30+09:00",
+ "fetched_at": "2026-10-10T20:44+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
- "live": true,
+ "live": false,
  "today": {
   "date": "2026-10-10",
   "games": [
@@ -86,11 +86,11 @@
     },
     "away_score": 9,
     "home_score": 8,
-    "state": "live",
-    "state_text": "진행 중",
-    "inning": 9,
-    "half": "B",
-    "inning_text": "9회말",
+    "state": "final",
+    "state_text": "경기 종료",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "클레빈저",
@@ -100,7 +100,8 @@
     "save_pitcher": null,
     "tv": "MBC SPORTS+,KBS N SPORTS",
     "sr_id": "0",
-    "season_id": "2026"
+    "season_id": "2026",
+    "winner": "away"
    }
   ]
  },
