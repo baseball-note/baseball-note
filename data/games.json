@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-10T16:25+09:00",
+ "fetched_at": "2026-10-10T16:40+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -24,9 +24,9 @@
     "home_score": 1,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 7,
+    "inning": 8,
     "half": "B",
-    "inning_text": "7회말",
+    "inning_text": "8회말",
     "series": "정규경기",
     "header_no": 0,
     "away_starter": "톨허스트",
