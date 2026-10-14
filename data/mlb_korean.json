@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-10-14T02:11+09:00",
+ "fetched_at": "2026-10-15T02:22+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -929,6 +929,31 @@
     }
    ],
    "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/806739/headshot/67/current"
+  },
+  {
+   "id": 844488,
+   "name": "Heeju Shin",
+   "name_ko": null,
+   "position": "OF",
+   "age": 18,
+   "birth_city": "Ulsan",
+   "profile": {
+    "birth": "2008-02-25",
+    "weight": 73,
+    "bats": "L",
+    "throws": "R",
+    "position_name": "Outfield"
+   },
+   "team": "DSL Brewers Gold",
+   "team_id": 2101,
+   "team_ko": null,
+   "parent_org_id": 158,
+   "parent_org": "Milwaukee Brewers",
+   "parent_org_ko": "밀워키 브루어스",
+   "level_id": 16,
+   "level": "루키",
+   "splits": [],
+   "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/844488/headshot/67/current"
   },
   {
    "id": 842831,
