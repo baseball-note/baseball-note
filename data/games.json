@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-14T21:05+09:00",
+ "fetched_at": "2026-10-14T21:42+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
@@ -21,12 +21,12 @@
      "name": "LG"
     },
     "away_score": 1,
-    "home_score": 2,
+    "home_score": 3,
     "state": "live",
     "state_text": "진행 중",
-    "inning": 7,
+    "inning": 8,
     "half": "B",
-    "inning_text": "7회말",
+    "inning_text": "8회말",
     "series": "WC1",
     "header_no": 0,
     "away_starter": "곽빈",
