@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-10-16T02:23+09:00",
+ "fetched_at": "2026-10-17T02:19+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -939,6 +939,7 @@
    "birth_city": "Ulsan",
    "profile": {
     "birth": "2008-02-25",
+    "height": 170,
     "weight": 73,
     "bats": "L",
     "throws": "R",
