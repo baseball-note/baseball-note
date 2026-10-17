@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-10-17T02:19+09:00",
+ "fetched_at": "2026-10-18T04:00+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -63,7 +63,7 @@
    "name": "Ha-Seong Kim",
    "name_ko": "김하성",
    "position": "SS",
-   "age": 30,
+   "age": 31,
    "birth_city": "Bucheon",
    "profile": {
     "number": "7",
