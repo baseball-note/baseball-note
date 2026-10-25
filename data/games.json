@@ -1,10 +1,46 @@
 {
- "fetched_at": "2026-10-25T18:30+09:00",
+ "fetched_at": "2026-10-26T02:20+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
  "live": false,
  "today": {
+  "date": "2026-10-26",
+  "games": [
+   {
+    "id": "20261026HTSS0",
+    "date": "2026-10-26",
+    "time": "18:30",
+    "stadium": "대구",
+    "away": {
+     "code": "KIA",
+     "name": "KIA"
+    },
+    "home": {
+     "code": "SAMSUNG",
+     "name": "삼성"
+    },
+    "away_score": null,
+    "home_score": null,
+    "state": "before",
+    "state_text": "경기 전",
+    "inning": null,
+    "half": null,
+    "inning_text": null,
+    "series": "PO1",
+    "header_no": 0,
+    "away_starter": "네일",
+    "home_starter": "페덱",
+    "win_pitcher": null,
+    "lose_pitcher": null,
+    "save_pitcher": null,
+    "tv": "MBC TV",
+    "sr_id": "5",
+    "season_id": "2026"
+   }
+  ]
+ },
+ "yesterday": {
   "date": "2026-10-25",
   "games": [
    {
@@ -39,9 +75,5 @@
     "season_id": "2026"
    }
   ]
- },
- "yesterday": {
-  "date": "2026-10-24",
-  "games": []
  }
 }
