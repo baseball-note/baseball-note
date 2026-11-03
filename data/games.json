@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-03T07:13+09:00",
+ "fetched_at": "2026-11-03T21:32+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
- "live": false,
+ "live": true,
  "today": {
   "date": "2026-11-03",
   "games": [
@@ -20,13 +20,13 @@
      "code": "KT",
      "name": "KT"
     },
-    "away_score": null,
-    "home_score": null,
-    "state": "before",
-    "state_text": "경기 전",
-    "inning": null,
-    "half": null,
-    "inning_text": null,
+    "away_score": 6,
+    "home_score": 8,
+    "state": "live",
+    "state_text": "진행 중",
+    "inning": 8,
+    "half": "T",
+    "inning_text": "8회초",
     "series": "KS1",
     "header_no": 0,
     "away_starter": "최원태",
