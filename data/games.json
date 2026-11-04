@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-11-04T07:11+09:00",
+ "fetched_at": "2026-11-04T21:42+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
- "live": false,
+ "live": true,
  "today": {
   "date": "2026-11-04",
   "games": [
@@ -20,13 +20,13 @@
      "code": "KT",
      "name": "KT"
     },
-    "away_score": null,
-    "home_score": null,
-    "state": "before",
-    "state_text": "경기 전",
-    "inning": null,
-    "half": null,
-    "inning_text": null,
+    "away_score": 1,
+    "home_score": 1,
+    "state": "live",
+    "state_text": "진행 중",
+    "inning": 10,
+    "half": "T",
+    "inning_text": "10회초",
     "series": "KS2",
     "header_no": 0,
     "away_starter": "페덱",
