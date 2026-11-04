@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-11-04T07:11+09:00",
+ "fetched_at": "2026-11-05T07:22+09:00",
  "source": "https://eng.koreabaseball.com",
  "seed": false,
  "board_size": 20,
@@ -454,7 +454,7 @@
    }
   }
  },
- "team_records_at": "2026-11-03",
+ "team_records_at": "2026-11-04",
  "batting_top5": {
   "AVG": [
    {
