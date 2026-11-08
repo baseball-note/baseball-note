@@ -1,25 +1,12 @@
 {
  "season": 2026,
- "fetched_at": "2026-11-08T05:39+09:00",
+ "fetched_at": "2026-11-09T05:56+09:00",
  "source": "https://eng.koreabaseball.com",
  "seed": false,
  "board_size": 20,
  "standings": [
   {
    "rank": 1,
-   "team": "KT",
-   "GAMES": 144,
-   "W": 90,
-   "L": 49,
-   "D": 5,
-   "PCT": 0.647,
-   "GB": 0.0,
-   "STREAK": "W0승",
-   "HOME": "45-24-2",
-   "AWAY": "45-25-3"
-  },
-  {
-   "rank": 2,
    "team": "SAMSUNG",
    "GAMES": 144,
    "W": 83,
@@ -30,6 +17,19 @@
    "STREAK": "L4",
    "HOME": "43-29-1",
    "AWAY": "40-29-2"
+  },
+  {
+   "rank": 2,
+   "team": "KT",
+   "GAMES": 144,
+   "W": 90,
+   "L": 49,
+   "D": 5,
+   "PCT": 0.647,
+   "GB": 0.0,
+   "STREAK": "W0승",
+   "HOME": "45-24-2",
+   "AWAY": "45-25-3"
   },
   {
    "rank": 3,
@@ -395,7 +395,7 @@
     "SB": 97,
     "CS": 29,
     "SB%": 77.0,
-    "OOB": 41,
+    "OOB": 42,
     "PKO": 7
    },
    "SSG": {
@@ -440,7 +440,7 @@
     "SB": 61,
     "CS": 38,
     "SB%": 61.6,
-    "OOB": 40,
+    "OOB": 41,
     "PKO": 7
    },
    "KIWOOM": {
@@ -454,7 +454,7 @@
    }
   }
  },
- "team_records_at": "2026-11-07",
+ "team_records_at": "2026-11-08",
  "batting_top5": {
   "AVG": [
    {
