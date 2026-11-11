@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-11-11T07:07+09:00",
+ "fetched_at": "2026-11-12T08:16+09:00",
  "source": "https://eng.koreabaseball.com",
  "seed": false,
  "board_size": 20,
@@ -377,7 +377,7 @@
     "SB": 117,
     "CS": 29,
     "SB%": 80.1,
-    "OOB": 43,
+    "OOB": 42,
     "PKO": 7
    },
    "LOTTE": {
@@ -395,7 +395,7 @@
     "SB": 97,
     "CS": 29,
     "SB%": 77.0,
-    "OOB": 42,
+    "OOB": 40,
     "PKO": 7
    },
    "SSG": {
@@ -413,8 +413,8 @@
     "SB": 91,
     "CS": 38,
     "SB%": 70.5,
-    "OOB": 42,
-    "PKO": 8
+    "OOB": 41,
+    "PKO": 7
    },
    "KIA": {
     "G": 144,
@@ -422,7 +422,7 @@
     "SB": 84,
     "CS": 19,
     "SB%": 81.6,
-    "OOB": 35,
+    "OOB": 32,
     "PKO": 7
    },
    "HANWHA": {
@@ -440,7 +440,7 @@
     "SB": 61,
     "CS": 38,
     "SB%": 61.6,
-    "OOB": 41,
+    "OOB": 40,
     "PKO": 7
    },
    "KIWOOM": {
@@ -454,7 +454,7 @@
    }
   }
  },
- "team_records_at": "2026-11-10",
+ "team_records_at": "2026-11-11",
  "batting_top5": {
   "AVG": [
    {
