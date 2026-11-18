@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-11-18T08:43+09:00",
+ "fetched_at": "2026-11-19T08:15+09:00",
  "source": "https://eng.koreabaseball.com",
  "seed": false,
  "board_size": 20,
@@ -27,7 +27,7 @@
    "D": 5,
    "PCT": 0.647,
    "GB": 0.0,
-   "STREAK": "W0승",
+   "STREAK": "W10",
    "HOME": "45-24-2",
    "AWAY": "45-25-3"
   },
@@ -454,7 +454,7 @@
    }
   }
  },
- "team_records_at": "2026-11-17",
+ "team_records_at": "2026-11-18",
  "batting_top5": {
   "AVG": [
    {
