@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "fetched_at": "2026-11-19T08:15+09:00",
+ "fetched_at": "2026-11-20T08:24+09:00",
  "source": "https://statsapi.mlb.com/api/v1",
  "seed": false,
  "players": [
@@ -929,6 +929,32 @@
     }
    ],
    "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/806739/headshot/67/current"
+  },
+  {
+   "id": 842353,
+   "name": "Chan-Min Park",
+   "name_ko": null,
+   "position": "P",
+   "age": 17,
+   "birth_city": "Gwangju",
+   "profile": {
+    "birth": "2008-12-03",
+    "height": 190,
+    "weight": 88,
+    "bats": "R",
+    "throws": "R",
+    "position_name": "Pitcher"
+   },
+   "team": "DSL Phillies",
+   "team_id": 623,
+   "team_ko": null,
+   "parent_org_id": 143,
+   "parent_org": "Philadelphia Phillies",
+   "parent_org_ko": "필라델피아 필리스",
+   "level_id": 16,
+   "level": "루키",
+   "splits": [],
+   "headshot": "https://img.mlbstatic.com/mlb-photos/image/upload/w_213,q_auto:best/v1/people/842353/headshot/67/current"
   },
   {
    "id": 844488,
