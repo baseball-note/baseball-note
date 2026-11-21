@@ -1,15 +1,15 @@
 {
- "fetched_at": "2026-11-21T06:33+09:00",
+ "fetched_at": "2026-11-22T05:07+09:00",
  "source": "https://www.koreabaseball.com",
  "seed": false,
  "script": "box-1",
  "live": false,
  "today": {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "games": []
  },
  "yesterday": {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "games": []
  }
 }
